@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verma Brothers Fitness | Premium Gym in Hazaribagh</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF3B00',
+                            dark: '#CC2F00',
+                            light: '#FF6233'
+                        },
+                        dark: {
+                            DEFAULT: '#111111',
+                            card: '#1A1A1A',
+                            lighter: '#2A2A2A'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl md:text-3xl font-heading font-bold text-white tracking-wider">
+                        VERMA BROTHERS <span class="text-brand">FITNESS</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="text-gray-300 hover:text-brand font-medium transition-colors">Features</a>
+                    <a href="#aicoach" class="text-gray-300 hover:text-brand font-medium transition-colors">AI Coach</a>
+                    <a href="#memberships" class="text-gray-300 hover:text-brand font-medium transition-colors">Memberships</a>
+                    <a href="#contact" class="bg-brand text-white px-6 py-2 rounded-md font-bold uppercase tracking-wide btn-brand">Join Now</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-card border-t border-dark-lighter">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-dark-lighter rounded-md">Features</a>
+                <a href="#aicoach" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-dark-lighter rounded-md">AI Coach</a>
+                <a href="#memberships" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-brand hover:bg-dark-lighter rounded-md">Memberships</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-brand font-bold hover:bg-dark-lighter rounded-md">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left w-full">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
+                TRANSFORM YOUR <br> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-yellow-500">BODY & MIND</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-2xl mb-10 mx-auto md:mx-0 font-light">
+                The ultimate fitness destination in Hazaribagh. State-of-the-art equipment, expert trainers, and our exclusive AI Workout Coach.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#memberships" class="bg-brand text-white px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg btn-brand text-center">
+                    View Plans
+                </a>
+                <a href="#aicoach" class="border-2 border-white text-white hover:border-brand hover:text-brand px-8 py-4 rounded-md font-bold uppercase tracking-wider text-lg transition-all text-center">
+                    Try AI Coach <i class="fas fa-robot ml-2"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#features" class="text-gray-400 hover:text-brand text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand text-lg font-bold tracking-widest mb-2">WHY CHOOSE US</h2>
+                <h3 class="text-4xl md:text-5xl font-bold">UNIQUE GYM FEATURES</h3>
+                <div class="w-24 h-1 bg-brand mx-auto mt-6 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-dark-card rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-dark-lighter">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1000&auto=format&fit=crop" alt="Premium Equipment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-brand/20 rounded-full flex items-center justify-center mb-4 text-brand text-xl">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Imported Equipment</h4>
+                        <p class="text-gray-400 text-sm">Train with top-tier, bio-mechanically engineered machines designed for maximum results and safety.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-dark-card rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-dark-lighter">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop" alt="Crossfit Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-brand/20 rounded-full flex items-center justify-center mb-4 text-brand text-xl">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Dedicated Crossfit Zone</h4>
+                        <p class="text-gray-400 text-sm">Push your limits in our specialized functional training area equipped with battle ropes, kettlebells, and tires.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-dark-card rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 border border-dark-lighter">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1000&auto=format&fit=crop" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-brand/20 rounded-full flex items-center justify-center mb-4 text-brand text-xl">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Expert Coaching</h4>
+                        <p class="text-gray-400 text-sm">Our certified trainers provide hands-on guidance to ensure your form is perfect and your goals are crushed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Coach Section (Dynamic Feature) -->
+    <section id="aicoach" class="py-20 relative overflow-hidden bg-dark-card">
+        <!-- Abstract Background shapes -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                
+                <!-- AI Input Form -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-brand text-lg font-bold tracking-widest mb-2"><i class="fas fa-microchip mr-2"></i> FUTURE OF FITNESS</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold mb-6">VERMA BROTHERS <br> AI COACH</h3>
+                    <p class="text-gray-400 mb-8 text-lg">Don't know where to start? Let our Virtual AI Coach design a customized daily workout plan based on your specific goals and experience level.</p>
+                    
+                    <div class="bg-dark p-6 md:p-8 rounded-2xl border border-dark-lighter shadow-2xl">
+                        <form id="ai-form" onsubmit="event.preventDefault(); generateWorkout();">
+                            <div class="mb-5">
+                                <label class="block text-sm font-medium text-gray-300 mb-2">What is your primary goal?</label>
+                                <select id="ai-goal" class="w-full bg-dark-card border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required>
+                                    <option value="" disabled selected>Select Goal...</option>
+                                    <option value="weight-loss">Weight Loss & Toning</option>
+                                    <option value="muscle-gain">Muscle Building (Hypertrophy)</option>
+                                    <option value="strength">Raw Strength (Powerlifting)</option>
+                                    <option value="endurance">Stamina & Endurance</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <label class="block text-sm font-medium text-gray-300 mb-2">What is your experience level?</label>
+                                <select id="ai-level" class="w-full bg-dark-card border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required>
+                                    <option value="" disabled selected>Select Level...</option>
+                                    <option value="beginner">Beginner (0-6 months)</option>
+                                    <option value="intermediate">Intermediate (6 mo - 2 yrs)</option>
+                                    <option value="advanced">Advanced (2+ years)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Days available per week?</label>
+                                <input type="number" id="ai-days" min="2" max="6" value="4" class="w-full bg-dark-card border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand text-white py-4 rounded-lg font-bold uppercase tracking-wider text-lg btn-brand flex justify-center items-center gap-2">
+                                Generate My Plan <i class="fas fa-magic"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- AI Output Display -->
+                <div class="w-full lg:w-1/2">
+                    <div id="ai-output-container" class="bg-dark p-6 md:p-8 rounded-2xl border border-brand/30 shadow-[0_0_30px_rgba(255,59,0,0.1)] min-h-[500px] flex flex-col justify-center relative">
+                        
+                        <!-- Initial State -->
+                        <div id="ai-initial" class="text-center">
+                            <div class="w-24 h-24 bg-dark-card rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-dashed border-gray-600">
+                                <i class="fas fa-robot text-4xl text-gray-500"></i>
+                            </div>
+                            <h4 class="text-2xl font-heading font-bold text-gray-300 mb-2">Waiting for Input</h4>
+                            <p class="text-gray-500">Fill out the form to generate your AI-powered personalized workout strategy.</p>
+                        </div>
+
+                        <!-- Loading State -->
+                        <div id="ai-loading" class="text-center hidden">
+                            <i class="fas fa-circle-notch fa-spin text-5xl text-brand mb-4"></i>
+                            <h4 class="text-xl font-heading font-bold text-brand animate-pulse">Analyzing Biometrics & Generating Plan...</h4>
+                        </div>
+
+                        <!-- Result State -->
+                        <div id="ai-result" class="hidden h-full flex flex-col">
+                            <div class="flex justify-between items-center mb-6 pb-4 border-b border-dark-lighter">
+                                <div>
+                                    <h4 class="text-2xl font-bold text-brand">Your Custom Protocol</h4>
+                                    <p id="plan-meta" class="text-sm text-gray-400">Goal: Muscle Gain | Level: Adv | 4 Days/wk</p>
+                                </div>
+                                <i class="fas fa-check-circle text-3xl text-green-500"></i>
+                            </div>
+                            
+                            <!-- Dynamically injected routine -->
+                            <div id="routine-content" class="flex-grow overflow-y-auto pr-2 space-y-4">
+                                <!-- JS inserts data here -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memberships Section -->
+    <section id="memberships" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand text-lg font-bold tracking-widest mb-2">PRICING PLANS</h2>
+                <h3 class="text-4xl md:text-5xl font-bold">JOIN THE BROTHERHOOD</h3>
+                <div class="w-24 h-1 bg-brand mx-auto mt-6 rounded"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-6">
+                
+                <!-- Plan 1 -->
+                <div class="w-full max-w-sm bg-dark-card rounded-2xl border border-dark-lighter p-8 hover:-translate-y-2 transition-transform duration-300">
+                    <h4 class="text-2xl font-bold text-center mb-2">SILVER</h4>
+                    <p class="text-gray-400 text-center mb-6 text-sm">Perfect for beginners</p>
+                    <div class="text-center mb-8">
+                        <span class="text-4xl font-bold">₹999</span><span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> General Floor Access</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> Basic Equipment Use</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> Locker Facility</li>
+                        <li class="flex items-center text-gray-500"><i class="fas fa-times mr-3"></i> AI Coach Access</li>
+                        <li class="flex items-center text-gray-500"><i class="fas fa-times mr-3"></i> Personal Trainer</li>
+                    </ul>
+                    <button class="w-full py-3 border border-brand text-brand hover:bg-brand hover:text-white rounded-lg font-bold uppercase transition-colors">Select Plan</button>
+                </div>
+
+                <!-- Plan 2 (Highlighted) -->
+                <div class="w-full max-w-sm bg-gradient-to-b from-dark-card to-dark border-2 border-brand rounded-2xl p-8 transform lg:scale-110 shadow-[0_0_30px_rgba(255,59,0,0.15)] relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest">MOST POPULAR</div>
+                    <h4 class="text-2xl font-bold text-center mb-2 text-brand">GOLD</h4>
+                    <p class="text-gray-400 text-center mb-6 text-sm">For serious athletes</p>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-bold">₹1499</span><span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check text-brand mr-3"></i> 24/7 Floor Access</li>
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check text-brand mr-3"></i> Crossfit Zone Access</li>
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check text-brand mr-3"></i> Weekly Diet Chart</li>
+                        <li class="flex items-center text-gray-200"><i class="fas fa-check text-brand mr-3"></i> Unlimited AI Coach</li>
+                        <li class="flex items-center text-gray-500"><i class="fas fa-times mr-3"></i> 1-on-1 Trainer</li>
+                    </ul>
+                    <button class="w-full py-4 bg-brand text-white rounded-lg font-bold uppercase btn-brand">Select Plan</button>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="w-full max-w-sm bg-dark-card rounded-2xl border border-dark-lighter p-8 hover:-translate-y-2 transition-transform duration-300">
+                    <h4 class="text-2xl font-bold text-center mb-2">PLATINUM</h4>
+                    <p class="text-gray-400 text-center mb-6 text-sm">Ultimate transformation</p>
+                    <div class="text-center mb-8">
+                        <span class="text-4xl font-bold">₹2499</span><span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> All Gold Features</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> Dedicated Personal Trainer</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> Daily Diet Tracking</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> Supplement Guidance</li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-check text-brand mr-3"></i> Free Gym Merchandise</li>
+                    </ul>
+                    <button class="w-full py-3 border border-brand text-brand hover:bg-brand hover:text-white rounded-lg font-bold uppercase transition-colors">Select Plan</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-brand text-lg font-bold tracking-widest mb-2">GET IN TOUCH</h2>
+                    <h3 class="text-4xl font-bold mb-6">START YOUR JOURNEY</h3>
+                    <p class="text-gray-400 mb-8">Have questions about memberships, personal training, or facilities? Drop us a message and we'll get back to you immediately.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will contact you soon.');">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <input type="text" placeholder="Full Name" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required>
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Phone Number" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <input type="email" placeholder="Email Address" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required>
+                        </div>
+                        <div class="mb-6">
+                            <textarea rows="4" placeholder="Your Message" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand transition-colors" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-brand text-white px-8 py-3 rounded-md font-bold uppercase tracking-wider btn-brand">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info & Mini Map Area-->
+                <div class="bg-dark p-8 rounded-2xl border border-dark-lighter flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-6 border-b border-gray-800 pb-4">Contact Information</h4>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 bg-dark-card rounded-full flex items-center justify-center text-brand shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-white font-bold">Location</h5>
+                                <p class="text-gray-400">Korrah Chowk, Hazaribagh<br>Jharkhand, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 bg-dark-card rounded-full flex items-center justify-center text-brand shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-white font-bold">Call Us</h5>
+                                <p class="text-gray-400">+91 98765 43210 <br> +91 6207589346 </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-8">
+                            <div class="w-10 h-10 bg-dark-card rounded-full flex items-center justify-center text-brand shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-white font-bold">Email</h5>
+                                <p class="text-gray-400">info@vermabrothersfitness.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h5 class="text-white font-bold mb-4">Follow Our Journey</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-dark-card rounded-full flex items-center justify-center text-white hover:bg-brand transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-dark-card rounded-full flex items-center justify-center text-white hover:bg-brand transition-colors"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 bg-dark-card rounded-full flex items-center justify-center text-white hover:bg-brand transition-colors"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Map -->
+    <footer class="bg-black pt-10 border-t-2 border-brand">
+        <!-- Interactive Map (Korrah Chowk Hazaribagh) -->
+        <div class="w-full h-80 mb-10 grayscale hover:grayscale-0 transition-all duration-500">
+            <iframe 
+                src="https://maps.google.com/maps?q=Korrah%20chowk%20hazaribagh&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+                <div class="text-2xl font-heading font-bold text-white tracking-wider">
+                    VERMA BROTHERS <span class="text-brand">FITNESS</span>
+                </div>
+                
+                <p class="text-gray-500 text-sm">
+                    Empowering Hazaribagh to live healthier, stronger lives.
+                </p>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; <span id="year"></span> All rights reserved by <span class="text-brand font-bold">Deepak Prasad Verma</span>.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
